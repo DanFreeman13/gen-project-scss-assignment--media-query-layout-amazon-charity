@@ -1,17 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Mono|Roboto");
-* {
-  box-sizing: border-box;
-  font-family: 'PT Mono', monospace; }
-
-h1, h2 {
-  color: #007C4C; }
-
-body {
-  background-color: #fff; }
-
-p {
-  font-family: 'Roboto', sans-serif; }
-
 .container {
   width: 1024px;
   margin: 0 auto; }
@@ -72,3 +59,16 @@ p {
       margin: 20px auto; }
     .container__box {
       width: 90%; } }
+
+* {
+  box-sizing: border-box;
+  font-family: 'PT Mono', monospace; }
+
+h1, h2 {
+  color: #007C4C; }
+
+body {
+  background-color: #fff; }
+
+p {
+  font-family: 'Roboto', sans-serif; }

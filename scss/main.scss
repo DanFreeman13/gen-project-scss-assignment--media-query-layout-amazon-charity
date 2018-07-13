@@ -7,6 +7,12 @@ $cellphone-width: 300px;
 $header-bg: #DDDDDD;
 $borderbox: 2px solid #e1e1e1;
 
+@import "./scss/desktopSettings.scss";
+@import "./scss/tabletSettings";
+@import "./scss/mobileSettings.scss";
+
+
+
 * {
 	box-sizing: border-box;
 	font-family: 'PT Mono', monospace;
@@ -22,91 +28,4 @@ body {
 
 p{
 	font-family: 'Roboto', sans-serif;
-}
-
-//1024 Laptop Settings
-
-.container {
-	width: $desktop-width;
-	margin: 0 auto;
-    &__header {
-	background-color: $header-bg;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	}
-
-	&__logo {
-		&__left {
-		display: block;
-		width: 30%;
-		margin: 0 auto 0 20px;
-		position: relative;
-		top: 10px;
-		left: 70px;
-		}
-		&__right {
-		display: block;
-		width: 30%;
-		margin: 0 20px 0 auto;
-		position: relative;
-		bottom: 10px;
-		right: 70px;
-		}
-	}
-	&__photos {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	}
-	&__box {
-	width: 30%;
-	padding: 5px;
-	margin: auto;
-	margin-top: 0;
-	margin-bottom: 20px;
-	border: $borderbox;
-	border-radius: 3px;
-	}
-	&__image {
-	width: 100%;
-	}
-}
-
-//768 Tablet Settings
-
-@media screen and (max-width: $desktop-width) {
-	.container {
-	width: $tablet-width;
-	&__box {
-	width: 45%;
-	}
-	}
-}
-
-// Mobile Phone Settings
-
-@media screen and (max-width: $tablet-width) {
-	.container {
-	width: $cellphone-width;
-	&__header {
-		background-color: #DDDDDD;
-		margin: 0;
-		padding: 0;
-		position: static;
-	}
-	&__logo {
-		&__left,&__right {
-		display: block;
-		margin: 0 auto;
-		position: static;
-		width: 80%;
-		padding: 10px;
-		margin: 20px auto;
-	}	}
-	&__box {
-		width: 90%;
-	}
-}
-	
 }

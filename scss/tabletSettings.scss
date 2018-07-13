@@ -1,0 +1,10 @@
+//768 Tablet Settings
+
+@media screen and (max-width: $desktop-width) {
+	.container {
+	width: $tablet-width;
+	&__box {
+	width: 45%;
+	}
+	}
+}

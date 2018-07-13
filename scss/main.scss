@@ -1,0 +1,118 @@
+/*
+
+    font-family: 'PT Mono', monospace;
+
+    font-family: 'Roboto', sans-serif;
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=PT+Mono|Roboto');
+
+* {
+	box-sizing: border-box;
+	font-family: 'PT Mono', monospace;
+}
+
+h1, h2 {
+	color: #007C4C;
+}
+
+p{
+	font-family: 'Roboto', sans-serif;
+}
+
+div {
+	outline: 1px solid red;
+}
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.container__header {
+	background-color: #DDDDDD;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.container__logoleft {
+	display: block;
+	width: 30%;
+	margin: 0 auto 0 20px;
+	position: relative;
+	top: 10px;
+	left: 70px;
+}
+
+.container__logoright {
+	display: block;
+	width: 30%;
+	margin: 0 20px 0 auto;
+	position: relative;
+	bottom: 10px;
+	right: 70px;
+}
+
+.container__photos {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.container__box {
+	width: 30%;
+	padding: 10px;
+	margin: auto;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.container__image {
+	width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+	width: 768px;
+}
+	.container__box {
+	width: 45%;
+}
+	
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+	width: 300px;
+	}
+	.container__header {
+		background-color: #DDDDDD;
+		margin: 0;
+		padding: 0;
+		position: static;
+	}
+
+	.container__logoleft {
+		display: block;
+		margin: 0 auto;
+		position: static;
+		width: 80%;
+		padding: 10px;
+		margin: 20px auto;
+	}
+
+	.container__logoright {
+		display: block;
+		margin: 0 auto;
+		position: static;
+		width: 80%;
+		padding: 10px;
+		margin: 20px auto;
+	}
+	.container__box {
+		width: 90%;
+	}
+	
+}

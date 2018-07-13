@@ -1,12 +1,11 @@
-/*
-
-    font-family: 'PT Mono', monospace;
-
-    font-family: 'Roboto', sans-serif;
-
-*/
-
 @import url('https://fonts.googleapis.com/css?family=PT+Mono|Roboto');
+
+$whitebody: #fff;
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$cellphone-width: 300px;
+$header-bg: #DDDDDD;
+$borderbox: 2px solid #e1e1e1;
 
 * {
 	box-sizing: border-box;
@@ -17,102 +16,97 @@ h1, h2 {
 	color: #007C4C;
 }
 
+body {
+	background-color: $whitebody;
+}
+
 p{
 	font-family: 'Roboto', sans-serif;
 }
 
-div {
-	outline: 1px solid red;
-}
+//1024 Laptop Settings
 
 .container {
-	width: 1024px;
+	width: $desktop-width;
 	margin: 0 auto;
-}
-
-.container__header {
-	background-color: #DDDDDD;
+    &__header {
+	background-color: $header-bg;
 	margin: 0;
 	padding: 0;
 	position: relative;
-}
+	}
 
-.container__logoleft {
-	display: block;
-	width: 30%;
-	margin: 0 auto 0 20px;
-	position: relative;
-	top: 10px;
-	left: 70px;
-}
-
-.container__logoright {
-	display: block;
-	width: 30%;
-	margin: 0 20px 0 auto;
-	position: relative;
-	bottom: 10px;
-	right: 70px;
-}
-
-.container__photos {
+	&__logo {
+		&__left {
+		display: block;
+		width: 30%;
+		margin: 0 auto 0 20px;
+		position: relative;
+		top: 10px;
+		left: 70px;
+		}
+		&__right {
+		display: block;
+		width: 30%;
+		margin: 0 20px 0 auto;
+		position: relative;
+		bottom: 10px;
+		right: 70px;
+		}
+	}
+	&__photos {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
-}
-
-.container__box {
+	}
+	&__box {
 	width: 30%;
-	padding: 10px;
+	padding: 5px;
 	margin: auto;
 	margin-top: 0;
 	margin-bottom: 20px;
-}
-
-.container__image {
-	width: 100%;
-}
-
-@media screen and (max-width: 1024px) {
-	.container {
-	width: 768px;
-}
-	.container__box {
-	width: 45%;
-}
-	
-}
-
-@media screen and (max-width: 768px) {
-	.container {
-	width: 300px;
+	border: $borderbox;
+	border-radius: 3px;
 	}
-	.container__header {
+	&__image {
+	width: 100%;
+	}
+}
+
+//768 Tablet Settings
+
+@media screen and (max-width: $desktop-width) {
+	.container {
+	width: $tablet-width;
+	&__box {
+	width: 45%;
+	}
+	}
+}
+
+// Mobile Phone Settings
+
+@media screen and (max-width: $tablet-width) {
+	.container {
+	width: $cellphone-width;
+	&__header {
 		background-color: #DDDDDD;
 		margin: 0;
 		padding: 0;
 		position: static;
 	}
-
-	.container__logoleft {
+	&__logo {
+		&__left,&__right {
 		display: block;
 		margin: 0 auto;
 		position: static;
 		width: 80%;
 		padding: 10px;
 		margin: 20px auto;
-	}
-
-	.container__logoright {
-		display: block;
-		margin: 0 auto;
-		position: static;
-		width: 80%;
-		padding: 10px;
-		margin: 20px auto;
-	}
-	.container__box {
+	}	}
+	&__box {
 		width: 90%;
 	}
+}
 	
 }

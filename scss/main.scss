@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Mono|Roboto');
 
-$whitebody: #fff;
-$desktop-width: 1024px;
-$tablet-width: 768px;
-$cellphone-width: 300px;
-$header-bg: #DDDDDD;
-$borderbox: 2px solid #e1e1e1;
+@import "./variables.scss";
 
-@import "./scss/desktopSettings.scss";
-@import "./scss/tabletSettings";
-@import "./scss/mobileSettings.scss";
+@import "./desktopSettings.scss";
+@import "./tabletSettings";
+@import "./mobileSettings.scss";
 
 
 
